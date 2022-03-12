@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: rgb(201, 202, 206);
+}
+
+
+/* ====================================================================================================================
+                                                 NAVIGATION BAR
+==================================================================================================================== */
+
+header {
+    height: 70px;
+    width: 100%;
+    background-color: #001b35;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    padding-right: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.left ul {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#logo {
+    height: 70px;
+}
+
+.left li {
+    list-style: none;
+}
+
+.left li a {
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 0 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.left li a .fa {
+    font-size: 16px;
+    margin-left: 7px;
+}
+
+.left li a:hover {
+    color: rgb(214, 214, 214);
+}
+
+.right {
+    padding: 0 10px;
+}
+
+input[type="text"] {
+    width: 18vw;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding: 0 5px;
+}
+
+.right i {
+    color: white;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+
+/* ====================================================================================================================
+                                                DIV MAIN                                                           
+==================================================================================================================== */
+
+.main .images {
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.main .images #img1 {
+    width: 40vw;
+}
+
+.main .images #img2 {
+    width: 60vw;
+    transition: 1s ease-in-out;
+}
+
+.main .images #img2:hover {
+    width: 30vw;
+    /* margin: 0 10px; */
+    transform: scale-x(0.9);
+}
+
+.main .images #img3 {
+    width: 40vw;
+}
+
+
+/* ====================================================================================================================
+                                                     DIV POSTER  
+==================================================================================================================== */
+
+.poster {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 85vh;
+    margin: auto;
+    position: relative;
+    top: 0;
+    padding: 20px;
+}
+
+.poster::before {
+    content: "";
+    position: absolute;
+    opacity: 90%;
+    height: 90%;
+    width: 100%;
+    background: url(shopping.jpg) no-repeat center center/cover;
+    box-shadow: 7px 7px 9px rgba(0, 0, 0, 0.76), -7px -7px 9px rgba(0, 0, 0, 0.76);
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.poster h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    font-family: 'Merriweather', serif;
+}
+
+.poster h3 {
+    font-size: 25px;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+    font-family: 'Merriweather', serif;
+}
+
+
+/* ====================================================================================================================
+                                                   DIV CARDS
+==================================================================================================================== */
+
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    border: 1px solid rgb(250, 226, 226);
+    border-radius: 5px;
+    margin: 10px 20px;
+    background-color: rgb(242, 252, 255);
+    overflow: hidden;
+    z-index: 4;
+}
+
+.card-container .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.card-container .section h3 {
+    font-size: 20px;
+    font-family: 'Mate SC', serif;
+}
+
+.card-container .section .card-btn {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(0, 102, 255);
+    padding: 5px 15px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.card-container .section .card-btn:hover {
+    background-color: rgb(0, 65, 161);
+}
+
+.card-container .classitems {
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.card-container .classitems .items img {
+    width: 10vw;
+    height: 23vh;
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+
+.card-container .classitems .lines {
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+/* ====================================================================================================================
+                                              FOOTER
+==================================================================================================================== */
+
+footer {
+    /* position: relative; */
+    width: 100%;
+    background-color: #001b35;
+    z-index: 3;
+    padding: 10px;
+}
+
+footer .upper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+footer h3 {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(206, 206, 206);
+}
+
+footer .upper .links {
+    display: flex;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .links p {
+    display: none;
+}
+
+.links a {
+    display: inline-flex;
+    height: 30px;
+    width: 30px;
+    margin: 0px 15px;
+    border-radius: 8px;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #001b35;
+    box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.5), 5px 5px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.links a .fa {
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.links a:hover {
+    background: #ffffff;
+    box-shadow: inset -5px -5px 5px rgba(255, 255, 255, 0.589), inset 3px 3px 5px #001b35e0;
+}
+
+.links a:hover .fa {
+    font-size: 15px;
+}
+
+.links a:hover p {
+    display: none;
+}
+
+.links a:hover .fa-facebook-official {
+    color: rgb(0, 89, 255);
+}
+
+.links a:hover .fa-instagram {
+    color: #e1306b;
+}
+
+.links a:hover .fa-twitter {
+    color: rgb(29, 161, 242);
+}
+
+.links a:hover .fa-whatsapp {
+    color: #25D366;
+}
+
+.links a:hover .fa-youtube-play {
+    color: #FF0000;
+}
+
+.foot-content {
+    display: flex;
+    padding: 0 20px;
+    margin: 15px auto;
+    width: 90vw;
+    justify-content: center;
+}
+
+.foot-content ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 25px;
+}
+
+.official-info {
+    padding-left: 25px;
+    border-left: 1px solid rgb(139, 141, 146);
+}
+
+.foot-content ul h {
+    font-size: 15px;
+    color: rgb(139, 141, 146);
+    font-weight: bold;
+    margin: 15px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.foot-content ul p {
+    color: white;
+    font-size: 14px;
+    margin: 8px 0;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+
+.foot-content ul p a {
+    color: rgb(102 168 255);
+}
+
+.foot-content ul li {
+    list-style: none;
+    margin-top: 5px;
+}
+
+.foot-content ul li a {
+    color: white;
+    font-size: 1vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-align: left;
+}
+
+.bottom {
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    padding-top: 10px;
+}
+
+
+/* ====================================================================================================================
+                                             UTILITY CLASSES
+==================================================================================================================== */
+
+.discount {
+    color: rgb(41, 175, 41);
+    font-weight: 600;
+}
+
+.lines p {
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    ;
+}
